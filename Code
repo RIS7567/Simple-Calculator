@@ -1,0 +1,42 @@
+#Calculator
+while True:
+    try:
+        print('Choose Operation:\n +   ADD\n -   SUBTRACT\n *   MULTIPLY\n **  POWER\n /   DIVIDE\n //  DIVIDE & ROUND DOWN\n -// DIVIDE & ROUND UP')
+        c=input()
+        a=float(input('Enter first number: '))
+        b=float(input('Enter second number: '))
+        d=['+','-','*','**','/','//','-//']
+        if c not in d:
+            print('Please enter a valid operation')
+            c=input() 
+            if c=='+':
+                print(a+b)
+            elif c=='-':
+                print(a-b)
+            elif c=='*':
+                print(a*b)
+            elif c=='**':
+                print(a**b)
+            elif c=='/':
+                print(a/b)
+            elif c=='//':
+                print(a//b)
+            elif c=='-//':
+                print(-(-a//b))
+        elif c=='+':
+            print(a+b)
+        elif c=='-':
+            print(a-b)
+        elif c=='*':
+            print(a*b)
+        elif c=='**':
+            print(a**b)
+        elif c=='/':
+            print(a/b)
+        elif c=='//':
+            print(a//b)
+        elif c=='-//':
+            print(-(-a//b))
+        break
+    except ValueError:
+        print('Please enter a number only')
